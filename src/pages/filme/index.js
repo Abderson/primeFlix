@@ -16,7 +16,7 @@ function Filme() {
       try {
         const response = await api.get(`movie/${id}`, {
           params: {
-            api_key: '54b8ea9059fdf6f57807e6c0bb19b60b',
+            api_key: process.env.REACT_APP_API_KEY || '54b8ea9059fdf6f57807e6c0bb19b60b',
             language: 'pt-BR',
             page: 1,
           }
@@ -55,7 +55,7 @@ function Filme() {
   }
 
   if (loading) {
-    return <div><h1>{filme.title}</h1></div>;
+    return <div><h1>Carregando...</h1></div>;
   } 
 
  
