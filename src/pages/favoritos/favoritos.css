@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Container da lista de favoritos: exibe os cards lado a lado e centralizados */
+.favoritos-lista {
+
+    display: flex;              /* Cards em linha */
+    flex-wrap: wrap;            /* Quebra para próxima linha se não couber */
+    gap: 24px;                  /* Espaço entre os cards */
+    justify-content: center;    /* Centraliza os cards horizontalmente */
+    max-width: 1200px;          /* Limita largura máxima */
+    margin: 0 auto;             /* Centraliza na tela */
+    padding: 20px 0;            /* Espaço acima e abaixo */
+}
+
+/* Container principal dos favoritos */
+.meus-favoritos {
+    background-color: #faf8f9;  /* Fundo claro */
+    padding: 20px;              /* Espaçamento interno */
+    border-radius: 8px;         /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Mensagem quando não há favoritos */
+.meus-favoritos ul span {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+/* Título da página */
+h1 {
+    text-align: center;
+    margin: 32px 0 24px 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Links gerais */
+a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Efeito hover nos links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Remove marcadores e centraliza a lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Card de cada filme favorito */
+li {
+    background-color: #fff;     /* Fundo branco */
+    margin: 0;                  /* Espaço controlado pelo gap do flex */
+    padding: 24px;              /* Espaçamento interno */
+    border-radius: 8px;         /* Cantos arredondados */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07); /* Sombra leve */
+    width: 320px;               /* Largura fixa para os cards */
+    transition: box-shadow 0.3s;/* Transição suave da sombra */
+    display: flex;
+    flex-direction: column;     /* Conteúdo em coluna */
+    align-items: center;        /* Centraliza conteúdo do card */
+}
+
+/* Sombra mais forte ao passar o mouse no card */
+li:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
+}
+
+/* Imagem do filme */
+li img {
+    max-width: 100%;            /* Imagem responsiva */
+    height: auto;
+    border-radius: 6px;         /* Cantos arredondados */
+    margin-bottom: 16px;        /* Espaço abaixo da imagem */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08); /* Sombra leve */
+}
+
+/* Área dos botões de ação (Detalhes e Remover) */
+.actions {
+    display: flex;              /* Botões em linha */
+    justify-content: center;    /* Centraliza os botões */
+    align-items: center;
+    gap: 16px;                  /* Espaço entre botões */
+    margin-top: 16px;
+    width: 100%;
+}
+
+/* Estilo base para links e botões dentro das ações */
+.actions a,
+.actions button {
+    min-width: 120px;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Link de detalhes do filme */
+.actions a {
+    color: #007bff;
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+/* Efeito hover no link de detalhes */
+.actions a:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+/* Botão de remover filme */
+.actions button {
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Efeito hover no botão de remover */
+.actions button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

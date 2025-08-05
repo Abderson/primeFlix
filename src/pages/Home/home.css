@@ -1,0 +1,132 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.lista-filmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.lista-filmes article {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.lista-filmes article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.lista-filmes article img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.lista-filmes article a {
+    display: block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.3s ease;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: auto;
+}
+
+
+
+.lista-filmes article a:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.lista-filmes strong {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    display: block;               /* Para que o strong seja um bloco */
+    flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .container h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .lista-filmes {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .lista-filmes article img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .lista-filmes {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .lista-filmes article img {
+        height: 300px;
+    }
+    
+    .lista-filmes article a {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+}
+
